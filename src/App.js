@@ -5,11 +5,15 @@ import "./assets/index.css";
 import "./assets/App.css"
 
 class App extends Component {
+
+  createNote(title, text) {
+    console.log(`Uma nova nota foi criada `+ title + " " + text);
+  }
   
   render() {
     return (
       <section className="content">
-        <Forms />
+        <Forms createNote={this.createNote}/>
         <ListNotes />
       </section>
     );
